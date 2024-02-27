@@ -47,8 +47,8 @@ const ProfileScreen = () => {
       };
       return (
       <View style={styles.container}>
-      <Text>Product List</Text>
-      <Text>Number of Products: {products.length}</Text>
+      {/* <Text>Product List</Text>
+      <Text>Number of Products: {products.length}</Text> */}
       <Pressable onPress={() => handleLogout()}>
       <View style={styles.rowContainer}>
       <MaterialCommunityIcons name="logout"  size={20} />
