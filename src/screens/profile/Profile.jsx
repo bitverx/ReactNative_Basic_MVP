@@ -30,7 +30,7 @@ const ProfileScreen = () => {
       );
     };
     useEffect(() => {
-        console.log(JSON.stringify(products)); 
+        // console.log(JSON.stringify(products)); 
     
       }, []
       );

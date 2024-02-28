@@ -3,7 +3,7 @@ import React from 'react'
 import Colors from '../../utils/colors'
 import Onboarding from 'react-native-onboarding-swiper'
 import { useNavigation , CommonActions} from '@react-navigation/native'
-import LoginScreen from '../Login/Presentation/Login'
+import LoginScreen from '../login/Login'
 
 const OnboardingScreen = () => {
     const navigation = useNavigation();

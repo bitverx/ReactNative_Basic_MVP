@@ -1,14 +1,62 @@
 
 import * as React from 'react';
+import { useState } from 'react';
 import { View } from 'react-native';
 import { Button, Menu, Divider, PaperProvider } from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useLoginScreenLogic } from '../screens/Login/Data/LoginScreenUseCase';
+
+
+import { useDispatch, useSelector } from 'react-redux';
+
+import { setEnv } from '../redux/Reducers/EnvironmentalSlice';
+import Constants from '../utils/Constants';
 
 const PopupMenu = () => {
+    const dispatch = useDispatch();
+    const [popupVisible, setPopupVisible] = useState(false);
 
-    const { popupVisible, onClosePopupMenu, onOpenPopupMenu, handleSwitchToDev, handleSwitchToStage, handleSwitchToProd } = useLoginScreenLogic();
+    const handleSwitchToDev = () => {
+        dispatch(
+            setEnv({
+                apiUrl: Constants.BASE_API_URL_DEV,
+                bannerUrl: Constants.BASE_API_URL_DEV,
+                environmentalName: Constants.DEV,
+            })
+        );
+        onClosePopupMenu();
 
+    };
+
+    const handleSwitchToStage = () => {
+        dispatch(
+            setEnv({
+                apiUrl: Constants.BASE_API_URL_STAGE,
+                bannerUrl: Constants.BASE_API_URL_STAGE,
+                environmentalName: Constants.STAGE,
+
+            })
+        );
+        onClosePopupMenu();
+    };
+
+    const handleSwitchToProd = () => {
+        dispatch(
+            setEnv({
+                apiUrl: Constants.BASE_API_URL_PROD,
+                bannerUrl: Constants.BASE_API_URL_PROD,
+                environmentalName: Constants.PROD,
+
+            })
+        );
+        onClosePopupMenu();
+
+    };
+    const onClosePopupMenu = () => {
+        setPopupVisible(false);
+    }
+    const onOpenPopupMenu = () => {
+        setPopupVisible(true);
+    }
 
 
     return (

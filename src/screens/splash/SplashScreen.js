@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, Image } from 'react-native';
 import { useNavigation, CommonActions } from '@react-navigation/native';
 import * as SecureStore from 'expo-secure-store';
-import COLORS from '../../utils/colors';
+import Colors from '../../utils/colors';
 
 const logoImg = require('../../assets/images/bitverx_logo.jpeg');
 
@@ -76,9 +76,9 @@ const SplashScreen = () => {
     width: 150,
     height: 150,
     margin: 20,
-    borderColor: COLORS.primariColor,
+    borderColor: Colors.primariColor,
     borderWidth: 10,
-    backgroundColor: COLORS.primariColor,
+    backgroundColor: Colors.primariColor,
     borderRadius: 100,
     marginVertical: 60,
     paddingVertical: 20, }} />
