@@ -1,14 +1,14 @@
-import { StyleSheet } from 'react-native';
-import Colors from '../../../utils/colors';
+import React from 'react';
+import { Text, View,StyleSheet } from 'react-native';
+import Colors from '../../utils/colors';
+
+const ListItem = ({ item }) => (
+  <View style={styles.mainCardView}>
+    <Text>{item.title}</Text>
+  </View>
+);
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 0,
-  },
-  listItem: {
-    padding: 40,
-  },
   mainCardView: {
     height: 90,
     alignItems: 'center',
@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
   
 });
 
-export default styles;
+export default ListItem;

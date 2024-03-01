@@ -5,7 +5,7 @@ import { Appbar, } from 'react-native-paper';
 import { useRoute } from '@react-navigation/native';
 import * as SecureStore from 'expo-secure-store';
 
-const DetailsScreen = () => {
+const DetailScreen = () => {
     const route = useRoute();
     const { item } = route.params;
     const [isModalVisible, setModalVisible] = useState(false);
@@ -97,4 +97,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default DetailsScreen;
+export default DetailScreen;

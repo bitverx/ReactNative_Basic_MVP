@@ -9,11 +9,14 @@
 import {configureStore,combineReducers} from '@reduxjs/toolkit';
 import ProductReducer from './Actions/ProductSlice';
 import environmentReducer from '../redux/Reducers/EnvironmentalSlice';
+import LoadingScreenReducer from './Reducers/LoadingScreenReducer';
 
 export const store = configureStore({
   reducer: {
     product: ProductReducer,
     environment: environmentReducer,
+    screenloading: LoadingScreenReducer,
+    
     
   },
 });

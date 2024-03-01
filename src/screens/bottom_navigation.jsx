@@ -1,5 +1,5 @@
-import  HomeScreen  from './Home/Presentation/HomeScreen';
-import  ProfileScreen  from './profile/profile_screen';
+import  HomeScreen  from './home/HomeScreen';
+import  ProfileScreen  from './profile/Profile';
 
 import * as React from 'react';
 import { Text, View } from 'react-native';
