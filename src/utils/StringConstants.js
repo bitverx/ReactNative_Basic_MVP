@@ -5,4 +5,5 @@ export default {
     SIGN_UP:'SignUp',
     ENTER_EMAIL: 'Enter your email address',
     ENTER_PASSWORD: 'Enter your password',
+    ENTER_PHONE_NUMBER: 'Enter your phone number',
   };
